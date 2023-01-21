@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    form(action='/sign-up', method='POST')
+        ul 
+            li
+                label(for='fname') First Name 
+                input(name='fname', type='text', placeholder='First name',value= (undefined===old ? '' : old.fname))
+            li
+                label(for='lname') Last Name 
+                input(name='lname', type='text', placeholder='Last name' value=(undefined===old ? '' : old.lname))
+            li
+                label(for='email') Email 
+                input(name='email', type='email', placeholder='email@provider.som' value=(undefined===old ? '' : old.email))
+            li
+                label(for='password') Password
+                input(name='password', type='password', placeholder='secret')
+            li
+                button(type='submit' ) sign up
+    

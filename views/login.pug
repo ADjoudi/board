@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    form(action='/login', method='POST')
+        ul
+            li 
+                label(for='email') Email 
+                input(name='email', type='email', placeholder='email@provider.som')
+            li
+                label(for='password') Password
+                input(name='password', type='password', placeholder='secret')
+            li
+                button(type='submit' ) login
+            

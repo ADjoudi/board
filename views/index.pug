@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    if user
+        ul(class ="posts")
+            each post in posts
+                li
+                    h3= post.author.fname + ' ' + post.author.lname
+                    p= post.text 
+                    h5= post.date 
+    else 
+        ul(class ="posts")
+            each post in posts
+                li
+                    p= post.text 
+                    h5= post.date 
